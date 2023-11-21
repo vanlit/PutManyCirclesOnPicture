@@ -22,9 +22,8 @@ The commands above are exactly how I've built them.
 X	Y	Size	Color
 890	840	15	aa33aa
 ```
-
-PutManyCirclesOnPicture <input_image_path> <output_image_path> <csvFileWithCirclesDescriptions>
-The output will be saved in jpeg.
+The first row will be skipped. 
+The input and output must be in jpeg. Feel free to submit a PR for to support other formats. ; )
 
 
 # Why in Go? Why not Javascript?
