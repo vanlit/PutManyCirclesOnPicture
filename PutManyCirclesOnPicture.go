@@ -49,7 +49,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("Image with %d colored square(s) saved to %s\n", len(circleDescriptions), outputImagePath)
+	fmt.Printf("Image with %d colored circle(s) saved to %s\n", len(circleDescriptions), outputImagePath)
 }
 
 func readCSVOfCircleDescriptions(filePath string) ([]CircleDescription, error) {

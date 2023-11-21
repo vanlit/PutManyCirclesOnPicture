@@ -6,14 +6,14 @@ Simple as that. The circles are not really fancy, but the tool can still come ha
 You do not have to specify the GOOS and GOARCH if You want to build for the system You are building on.
 ``` bash
 # for linux
-GOOS=darwin GOARCH=amd64 go build .
+GOOS=linux GOARCH=amd64 go build -o PutManyCirclesOnPicture_lin64
 # for macos
-GOOS=darwin GOARCH=amd64 go build .
+GOOS=darwin GOARCH=amd64 go build -o PutManyCirclesOnPicture_darwin64
 # for windows
-GOOS=windows GOARCH=amd64 go build .
+GOOS=windows GOARCH=amd64 go build -o PutManyCirclesOnPicture_win64.exe 
 ```
-You can also just grab executables from the releases page.
-
+You can also just grab executable(s) from the releases page.
+The commands above are exactly how I've built them.
 
 # Run
 ### CSV file content example:
