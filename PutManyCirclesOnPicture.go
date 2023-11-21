@@ -18,7 +18,7 @@ type CircleDescription struct {
 	Color color.RGBA
 }
 
-const usage = `Usage: PutCircleOnPicture <input_image_path> <output_image_path> <csvFileWithCirclesDescriptions>
+const usage = `Usage: PutManyCirclesOnPicture <input_image_path> <output_image_path> <csvFileWithCirclesDescriptions>
 The structure of the csv:
 	{
 		X: integer,
@@ -49,7 +49,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("Image with colored square saved to %s\n", outputImagePath)
+	fmt.Printf("Image with %d colored square(s) saved to %s\n", len(circleDescriptions), outputImagePath)
 }
 
 func readCSVOfCircleDescriptions(filePath string) ([]CircleDescription, error) {
@@ -180,7 +180,6 @@ func validatePositiveInt(val int) error {
 func parseColor(colorStr string) color.RGBA {
 	var r, g, b, a uint8
 	fmt.Sscanf(colorStr, "%02x%02x%02x%02x", &r, &g, &b, &a)
-	fmt.Printf("%d, %d, %d, %d \n", r, g, b, a)
 	return color.RGBA{r, g, b, a}
 }
 

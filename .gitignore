@@ -1,2 +1,4 @@
 *.jpg
 *.csv
+*.csv#
+/release_assets
