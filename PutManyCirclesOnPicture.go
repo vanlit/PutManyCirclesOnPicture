@@ -23,7 +23,8 @@ The structure of the csv:
 	{
 		X: integer,
 		Y: integer,
-		Color: HTML-notation of the color
+		Size: integer,
+		Color: ######-hex-notation of the color, e.g. ccffcc
 	}
 `
 
