@@ -21,11 +21,13 @@ type CircleDescription struct {
 const usage = `Usage: PutManyCirclesOnPicture <input_image_path> <output_image_path> <csvFileWithCirclesDescriptions>
 The structure of the csv:
 	{
-		X: integer,
-		Y: integer,
-		Size: integer,
+		X: integer;
+		Y: integer;
+		Size: integer;
 		Color: ######-hex-notation of the color, e.g. ccffcc
 	}
+
+The csv delimiter is semicolon (;)
 `
 
 func main() {
@@ -63,6 +65,7 @@ func readCSVOfCircleDescriptions(filePath string) ([]CircleDescription, error) {
 
 	// Create a CSV reader
 	reader := csv.NewReader(file)
+	reader.Comma = ';'
 
 	// Read all the records from CSV
 	records, err := reader.ReadAll()
